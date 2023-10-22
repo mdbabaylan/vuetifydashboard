@@ -34,9 +34,14 @@
     <v-main> <!-- dump child components here, I'm assuming -->
       <v-container fluid>
         <GymPrograms />
-        BTC and ETH price feed
-        Gym and calorie reminder, if Date == Monday => Pushday + Calories
-        RSS / Show updates of manga you are reading
+        <CryptoGrid />
+        Endpoint for Bitcoin: https://api.coinpaprika.com/v1/ticker/btc-bitcoin
+        Endpoint for Ethereum: https://api.coinpaprika.com/v1/ticker/eth-ethereum
+        use these as they have more data vs coingecko
+
+        Gym and calorie reminder, if Date == Monday => Pushday + Calories (DONE)
+        BTC and ETH price feed (pending)
+        RSS / Show updates of manga you are reading (pending)
 
         responsive, simple and clean design
         dark theme power pls
@@ -48,11 +53,13 @@
 
 <script>
 import GymPrograms from "./components/GymPrograms";
+import CryptoGrid from "./components/CryptoGrid";
 export default {
   name: 'App',
 
   components: {
-    GymPrograms
+    GymPrograms,
+    CryptoGrid
   },
 
   data: () => ({
