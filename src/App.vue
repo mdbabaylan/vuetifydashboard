@@ -5,8 +5,6 @@
 
       <v-toolbar-title>ダッシュボード</v-toolbar-title>
 
-      <v-spacer></v-spacer>
-
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute bottom temporary>
       <v-list nav dense>
@@ -35,17 +33,10 @@
       <v-container fluid>
         <GymPrograms />
         <CryptoGrid />
+        <MangaGrid />
         Endpoint for Bitcoin: https://api.coinpaprika.com/v1/ticker/btc-bitcoin
         Endpoint for Ethereum: https://api.coinpaprika.com/v1/ticker/eth-ethereum
-        use these as they have more data vs coingecko
-
-        Gym and calorie reminder, if Date == Monday => Pushday + Calories (DONE)
-        BTC and ETH price feed (pending)
-        RSS / Show updates of manga you are reading (pending)
-
-        responsive, simple and clean design
-        dark theme power pls
-        that is all. thanks
+        Data table - Server side tables for Manga Grid
       </v-container>
     </v-main>
   </v-app>
@@ -54,12 +45,14 @@
 <script>
 import GymPrograms from "./components/GymPrograms";
 import CryptoGrid from "./components/CryptoGrid";
+import MangaGrid from "./components/MangaGrid";
 export default {
   name: 'App',
 
   components: {
     GymPrograms,
-    CryptoGrid
+    CryptoGrid,
+    MangaGrid
   },
 
   data: () => ({

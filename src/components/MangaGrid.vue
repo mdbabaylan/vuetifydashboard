@@ -93,7 +93,7 @@
 <script>
 
 export default {
-  name: 'CryptoGrid',
+  name: 'MangaGrid',
 
   data: () => ({
 
