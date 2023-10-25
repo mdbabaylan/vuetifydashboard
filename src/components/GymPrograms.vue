@@ -1,19 +1,21 @@
 <template>
-  <v-card class="mx-auto">
-    <v-img class="white--text align-end" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
-      <v-card-title>Gym Schedule</v-card-title>
-    </v-img>
+  <v-container fluid> <!-- unify the structures, so the spacings are the same! -->
+    <v-card class="mx-auto">
+      <v-img class="white--text align-end" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
+        <v-card-title>Gym Schedule</v-card-title>
+      </v-img>
 
-    <v-card-subtitle class="pb-0">
-      {{ todaysGymProgram.day }}
-    </v-card-subtitle>
+      <v-card-subtitle class="pb-0">
+        {{ todaysGymProgram.day }}
+      </v-card-subtitle>
 
-    <v-card-text class="text--primary">
-      <div>{{ todaysGymProgram.program }}</div>
-      <div>Calories: {{ todaysGymProgram.calories }}</div>
-    </v-card-text>
+      <v-card-text class="text--primary">
+        <div>{{ todaysGymProgram.program }}</div>
+        <div>Calories: {{ todaysGymProgram.calories }}</div>
+      </v-card-text>
 
-  </v-card>
+    </v-card>
+  </v-container>
 </template>
 
 <script>

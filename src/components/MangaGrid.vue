@@ -1,92 +1,36 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col cols="12" md="6" lg="6" class="no-padding">
+  <v-container fluid class="pa-0">
+    <v-card elevation="5">
+      <v-row no-gutters>
+        <v-col :cols="xs ? 12 : 3">
+          <v-img contain lazy-src="https://picsum.photos/id/11/10/6" max-height="250" :max-width="xs ? '100%' : '200px'"
+            src="https://i.redd.it/8guxopqh0hf71.png" class="mx-1 my-2">
+          </v-img>
+        </v-col>
+        <v-col :cols="xs ? 12 : 9">
+          <v-card-title>Manga Title</v-card-title>
+          <v-divider class="mx-4"></v-divider>
+          <v-card-subtitle>Chapter 139</v-card-subtitle>
+          <v-card-text>
+            <p>
+              <span>
+                <v-icon medium color="grey darken-2">
+                  mdi-account-multiple
+                </v-icon></span>
+              Scanlator Team
+            </p>
 
-        <v-card class="mx-auto">
-          <v-card-item title="Bitcoin">
-            <template v-slot:subtitle>
-              Price
-              <v-icon icon="mdi-currency-usd" size="18" color="green-darken-2" class="me-1 pb-1"></v-icon>
-            </template>
-          </v-card-item>
-
-          <v-card-text class="py-0">
-            <v-row align="center" no-gutters>
-              <v-col class="text-h3" cols="9">
-                $100,000
-              </v-col>
-
-              <v-col cols="3" class="text-right">
-                <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
-                <img src="./btc.png" width="80" height="80" alt="BTC">
-              </v-col>
-            </v-row>
+            <p>
+              <span>
+                <v-icon medium color="grey darken-2">
+                  mdi-book-open
+                </v-icon></span>
+              13 hours ago
+            </p>
           </v-card-text>
-
-          <div class="d-flex py-3 justify-space-between">
-            <v-list-item density="compact" prepend-icon="mdi-weather-windy">
-              <v-list-item-subtitle>123 km/h</v-list-item-subtitle>
-            </v-list-item>
-
-            <v-list-item density="compact" prepend-icon="mdi-weather-pouring">
-              <v-list-item-subtitle>48%</v-list-item-subtitle>
-            </v-list-item>
-          </div>
-
-          <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-btn>
-              View Chart
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6" lg="6" class="no-padding">
-
-        <v-card class="mx-auto">
-          <v-card-item title="Bitcoin">
-            <template v-slot:subtitle>
-              Price
-              <v-icon icon="mdi-currency-usd" size="18" color="green-darken-2" class="me-1 pb-1"></v-icon>
-            </template>
-          </v-card-item>
-
-          <v-card-text class="py-0">
-            <v-row align="center" no-gutters>
-              <v-col class="text-h3" cols="9">
-                $100,000
-              </v-col>
-
-              <v-col cols="3" class="text-right">
-                <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
-                <img src="./btc.png" width="80" height="80" alt="BTC">
-              </v-col>
-            </v-row>
-          </v-card-text>
-
-          <div class="d-flex py-3 justify-space-between">
-            <v-list-item density="compact" prepend-icon="mdi-weather-windy">
-              <v-list-item-subtitle>123 km/h</v-list-item-subtitle>
-            </v-list-item>
-
-            <v-list-item density="compact" prepend-icon="mdi-weather-pouring">
-              <v-list-item-subtitle>48%</v-list-item-subtitle>
-            </v-list-item>
-          </div>
-
-          <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-btn>
-              View Chart
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-
+        </v-col>
+      </v-row>
+    </v-card>
   </v-container>
 </template>
 
