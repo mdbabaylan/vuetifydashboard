@@ -5,35 +5,39 @@
 
       <v-toolbar-title>ダッシュボード</v-toolbar-title>
 
+      <div v-if="theme.global.current.value.dark">
+        <v-icon icon="mdi-moon-waxing-crescent" @click="toggleTheme"></v-icon>
+      </div>
+
+      <div v-else>
+        <v-icon icon="mdi-white-balance-sunny" @click="toggleTheme"></v-icon>
+      </div>
+      <!-- <v-btn @click="toggleTheme">theme</v-btn> -->
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute bottom temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
+            <v-list-item-title>Gym</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
+            <v-list-item-title>Crypto</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
+            <v-list-item-title>Manga</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
 
     <v-main> <!-- dump child components here, I'm assuming -->
       <v-container fluid>
         <GymPrograms />
         <CryptoGrid />
         <MangaGrid />
+        DARK THEME SWITCH ABOVE THE NAVBAR PLZ
         Endpoint for Bitcoin: https://api.coinpaprika.com/v1/ticker/btc-bitcoin
         Endpoint for Ethereum: https://api.coinpaprika.com/v1/ticker/eth-ethereum
         Data table - Server side tables for Manga Grid
@@ -46,6 +50,7 @@
 import GymPrograms from "./components/GymPrograms";
 import CryptoGrid from "./components/CryptoGrid";
 import MangaGrid from "./components/MangaGrid";
+import { mdiThemeLightDark } from '@mdi/js';
 export default {
   name: 'App',
 
@@ -58,6 +63,7 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
+    mdiThemeLightDark,
   }),
 
 
@@ -66,6 +72,16 @@ export default {
       this.drawer = false
     },
   },
+}
+</script>
 
+<script setup>
+import { useTheme } from 'vuetify'
+
+const theme = useTheme();
+
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 </script>

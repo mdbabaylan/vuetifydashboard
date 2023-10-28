@@ -1,8 +1,10 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col cols="12" md="6" lg="6" class="no-padding">
+  <v-container fluid class="px-0">
+    <v-row class="no-padding">
 
+      <!-- <v-for> the <v-col code> -->
+
+      <v-col cols="12" md="6" lg="6">
         <v-card class="mx-auto">
           <v-card-item title="Bitcoin">
             <template v-slot:subtitle>
@@ -43,8 +45,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="6" class="no-padding">
-
+      <v-col cols="12" md="6" lg="6">
         <v-card class="mx-auto">
           <v-card-item title="Bitcoin">
             <template v-slot:subtitle>
@@ -60,7 +61,6 @@
               </v-col>
 
               <v-col cols="3" class="text-right">
-                <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
                 <img src="./btc.png" width="80" height="80" alt="BTC">
               </v-col>
             </v-row>
