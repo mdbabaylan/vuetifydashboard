@@ -2,8 +2,6 @@
   <v-container fluid class="px-0">
     <v-row class="no-padding">
 
-      <!-- <v-for> the <v-col code> -->
-
       <v-col cols="12" md="6" lg="6">
         <v-card class="mx-auto">
           <v-card-item title="Bitcoin">
@@ -99,7 +97,7 @@ export default {
 
   }),
   computed: {
-  }
+  },
 
 }
 </script>

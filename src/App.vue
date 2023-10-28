@@ -5,14 +5,15 @@
 
       <v-toolbar-title>ダッシュボード</v-toolbar-title>
 
-      <div v-if="theme.global.current.value.dark">
-        <v-icon icon="mdi-moon-waxing-crescent" @click="toggleTheme"></v-icon>
-      </div>
+      <transition name="flip">
+        <div v-if="theme.global.current.value.dark">
+          <v-icon icon="mdi-moon-waxing-crescent" @click="toggleTheme"></v-icon>
+        </div>
+        <div v-else>
+          <v-icon icon="mdi-white-balance-sunny" @click="toggleTheme"></v-icon>
+        </div>
+      </transition>
 
-      <div v-else>
-        <v-icon icon="mdi-white-balance-sunny" @click="toggleTheme"></v-icon>
-      </div>
-      <!-- <v-btn @click="toggleTheme">theme</v-btn> -->
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute bottom temporary>
       <v-list nav dense>
@@ -85,3 +86,17 @@ function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 </script>
+<style scoped>
+.flip-enter-active,
+.flip-leave-active {
+  transition: transform 0.5s;
+}
+
+.flip-enter-from {
+  transform: rotateY(90deg);
+}
+
+.flip-leave-to {
+  transform: rotateY(-90deg);
+}
+</style>

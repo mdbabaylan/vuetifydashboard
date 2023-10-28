@@ -10,7 +10,7 @@
 
     <v-card-text class="text--primary">
       <div>{{ todaysGymProgram.program }}</div>
-      <div>Calories: {{ todaysGymProgram.calories }}</div>
+      <!-- <div>Calories: {{ todaysGymProgram.calories }}</div> -->
     </v-card-text>
 
   </v-card>

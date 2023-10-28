@@ -1,4 +1,5 @@
 <template>
+  <!-- <v-for> the <v-col code> , mangadex api-->
   <v-container fluid class="pa-0">
     <v-card elevation="5">
       <v-row no-gutters>
