@@ -7,7 +7,7 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 export default createVuetify({
   theme: {
-    defaultTheme: 'light', // Set default theme
+    defaultTheme: 'dark', // Set default theme
     themes: {
       light: {
         // Define your light theme colors here

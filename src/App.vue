@@ -66,8 +66,6 @@ export default {
     group: null,
     mdiThemeLightDark,
   }),
-
-
   watch: {
     group() {
       this.drawer = false
