@@ -15,7 +15,7 @@
 
           <v-card-text class="py-0">
             <v-row align="center" no-gutters>
-              <v-col class="text-h3" cols="9">
+              <v-col class="text-h4" cols="9">
                 ${{ twoDecimals(item.price_usd) }}
               </v-col>
 
@@ -34,8 +34,10 @@
             <v-list-item class="d-flex" density="compact">
               <v-list-item-icon>
                 <v-icon>mdi-hours-24 </v-icon>
-                <span :style="{ fontSize: '1.15em', color: item.percent_change_24h < 0 ? 'red' : 'green' }"> {{
-                  item.percent_change_24h }}%</span>
+                <span
+                  :style="{ fontSize: '1.1em', padding: '0.2em', color: item.percent_change_24h < 0 ? 'red' : 'green' }">
+                  {{
+                    item.percent_change_24h }}%</span>
               </v-list-item-icon>
             </v-list-item>
           </div>

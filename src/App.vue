@@ -38,10 +38,9 @@
         <GymPrograms />
         <CryptoGrid />
         <MangaGrid />
-        DARK THEME SWITCH ABOVE THE NAVBAR PLZ
-        Endpoint for Bitcoin: https://api.coinpaprika.com/v1/ticker/btc-bitcoin
-        Endpoint for Ethereum: https://api.coinpaprika.com/v1/ticker/eth-ethereum
-        Data table - Server side tables for Manga Grid
+        Viewpoint condition 350px height for xs and small
+        650px for medium to xl
+        Finish Mangagrid then deploy
       </v-container>
     </v-main>
   </v-app>
