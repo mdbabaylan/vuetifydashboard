@@ -1,7 +1,12 @@
 <template>
   <v-card class="mx-auto">
     <v-img class="white--text align-end" :height="imageHeight" :aspect-ratio="16 / 9" contain
-      :src="todaysGymProgram.image">
+      :src="todaysGymProgram.image" lazy-src="/placeholder.png">
+      <template v-slot:placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
       <v-card-title class="custom-bg white--text">Gym Schedule</v-card-title>
     </v-img>
 

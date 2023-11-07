@@ -21,11 +21,11 @@
 
               <v-col cols="3" class="text-right" v-if="item.symbol == 'BTC'">
                 <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
-                <img src="./btc.png" width="80" height="80" alt="BTC">
+                <v-img src="btc.png" width="80" height="80" alt="BTC" />
               </v-col>
               <v-col cols="3" class="text-right" v-else-if="item.symbol == 'ETH'">
                 <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
-                <img src="./eth.png" width="80" height="80" alt="BTC">
+                <v-img src="eth.png" width="80" height="80" alt="ETH" />
               </v-col>
             </v-row>
           </v-card-text>

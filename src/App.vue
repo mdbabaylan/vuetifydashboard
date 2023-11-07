@@ -38,9 +38,7 @@
         <GymPrograms />
         <CryptoGrid />
         <MangaGrid />
-        Viewpoint condition 350px height for xs and small
-        650px for medium to xl
-        Finish Mangagrid then deploy
+        MangaGrid finish
       </v-container>
     </v-main>
   </v-app>
