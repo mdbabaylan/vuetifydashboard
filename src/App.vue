@@ -33,12 +33,18 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-main> <!-- dump child components here, I'm assuming -->
+    <v-main>
+      <!-- dump child components here, I-frame the pages instead, speed, so you can return to the solidity tutorials -->
       <v-container fluid>
         <GymPrograms />
+        <WeatherGrid />
+        <NewsGrid />
         <CryptoGrid />
-        <MangaGrid />
-        MangaGrid finish
+        <!-- <MangaGrid /> -->
+        Pending:
+        0) prioritize Solidity for now
+        1) weather API implementation
+        2) facebook graph API implementation
       </v-container>
     </v-main>
   </v-app>
@@ -47,7 +53,9 @@
 <script>
 import GymPrograms from "./components/GymPrograms";
 import CryptoGrid from "./components/CryptoGrid";
-import MangaGrid from "./components/MangaGrid";
+//import MangaGrid from "./components/MangaGrid";
+import WeatherGrid from "./components/WeatherGrid";
+import NewsGrid from "./components/NewsGrid";
 import { mdiThemeLightDark } from '@mdi/js';
 export default {
   name: 'App',
@@ -55,7 +63,9 @@ export default {
   components: {
     GymPrograms,
     CryptoGrid,
-    MangaGrid
+    // MangaGrid,
+    WeatherGrid,
+    NewsGrid
   },
 
   data: () => ({

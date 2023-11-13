@@ -27,6 +27,9 @@
                 <!-- <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon> -->
                 <v-img src="eth.png" width="80" height="80" alt="ETH" />
               </v-col>
+              <v-col cols="12" class="text-left">
+                <span>coinpaprika api</span>
+              </v-col>
             </v-row>
           </v-card-text>
 
@@ -84,7 +87,7 @@ export default {
           // All requests are now complete
           // `btcResponse` and `ethResponse` are the responses of the requests in the order they were made
           const combinedData = [btcResponse.data, ethResponse.data];
-          console.log(combinedData);
+          //console.log(combinedData);
           this.items = combinedData;
           this.pricesLoading = false;
           // You can now work with `combinedData`

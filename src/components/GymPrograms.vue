@@ -28,13 +28,13 @@ export default {
 
   data: () => ({
     programForTheDay: {
-      0: { program: "Rest Day", calories: 2650, day: "Sunday", image: '/restday.png' },
-      1: { program: "Push Day", calories: 2900, day: "Monday", image: '/pushday.png' },
-      2: { program: "Pull Day", calories: 2900, day: "Tuesday", image: '/pullday.png' },
-      3: { program: "Rest Day", calories: 2650, day: "Wednesday", image: '/restday.png' },
-      4: { program: "Leg Day", calories: 2900, day: "Thursday", image: '/legday.png' },
-      5: { program: "Upper Day", calories: 2900, day: "Friday", image: '/upper.png' },
-      6: { program: "Rest Day", calories: 2650, day: "Saturday", image: '/restday.png' }
+      0: { program: "Rest Day", day: "Sunday", image: '/restday.png' },
+      1: { program: "Push A", day: "Monday", image: '/pushday.png' },
+      2: { program: "Pull B", day: "Tuesday", image: '/pullday.png' },
+      3: { program: "Rest Day", day: "Wednesday", image: '/restday.png' },
+      4: { program: "Leg Day", day: "Thursday", image: '/legday.png' },
+      5: { program: "Push A", day: "Friday", image: '/pushday.png' },
+      6: { program: "Pull B", day: "Saturday", image: '/pullday.png' }
     },
     imageHeight: '550'
   }),
